@@ -73,7 +73,10 @@ func (s *usecase) DetailParent(id int) (entity.TodoWithChild, error) {
 	result.IsParent = todo.IsParent
 	result.ParentId = todo.ParentId
 
-	child, _ := s.repository.GetChild(todo.Id)
+	child, err := s.repository.GetChild(todo.Id)
+	if err != nil {
+		return result, err
+	}
 
 	result.ChildTodo = child
 
