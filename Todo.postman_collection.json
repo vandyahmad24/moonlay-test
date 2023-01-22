@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "fb9852d8-4b31-4927-abf1-3724bb790099",
+		"name": "Todo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25388251"
+	},
+	"item": [
+		{
+			"name": "Get List Todo Without sublist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/todo?search=w&limit=10&skip=0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todo"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "w"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List Todo With List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/todo-with-child?search=w&limit=10&skip=0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todo-with-child"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "w"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List Todo Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/todo/5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todo",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "qqwe",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "wqwe",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/vandy/Pictures/test.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/todo",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create subtask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "qqwe",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "wqwe",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/vandy/Pictures/test.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/sublist/5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sublist",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "hasil update2",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "hasil update wwkkw",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/vandy/Pictures/test.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/todo/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "hasil update2",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "hasil update wwkkw",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/vandy/Pictures/test.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/todo/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todo",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
